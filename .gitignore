@@ -1,0 +1,6 @@
+.idea
+.venv
+Pipfile.lock
+.env
+storage
+mysql_db
