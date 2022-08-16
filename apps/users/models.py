@@ -5,7 +5,7 @@ from django.db import models
 from .managers import UserManager
 
 
-class UserModel(AbstractBaseUser, PermissionsMixin):
+class UserModel(AbstractBaseUser):
     class Meta:
         db_table = 'auth_user'
 
@@ -35,11 +35,7 @@ class ProfileModel(models.Model):
     # is_patient = models.BooleanField(default=True)
 
 
-class PatientModel(models.Model):
-    class Meta:
-        db_table = 'patient'
 
 
-class DoctorModel(models.Model):
-    class Meta:
-        db_table = 'doctor'
+
+
