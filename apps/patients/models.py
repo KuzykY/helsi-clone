@@ -18,3 +18,4 @@ class PatientModel(models.Model):
 class Appointment(models.Model):
     doctor = models.ForeignKey(DoctorModel, on_delete=models.CASCADE)
     patient = models.ForeignKey(PatientModel, on_delete=models.CASCADE)
+    date = models.DateTimeField('Created Time', auto_now_add=True, blank=True)
