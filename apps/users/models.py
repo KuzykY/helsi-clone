@@ -5,7 +5,7 @@ from django.db import models
 from .managers import UserManager
 
 
-class UserModel(AbstractBaseUser):
+class UserModel(AbstractBaseUser,PermissionsMixin):
     class Meta:
         db_table = 'auth_user'
 
