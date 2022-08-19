@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.doctors',
     'apps.patients',
     'apps.medical_cards',
+    'apps.auth',
 
 
 ]

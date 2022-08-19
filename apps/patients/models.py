@@ -16,8 +16,6 @@ class PatientModel(models.Model):
     # doctors = models.ManyToManyField('DoctorModel', through='AppointmentModel',related_name='patients')
     medical_card = models.OneToOneField(MedicalCardModel, on_delete=models.CASCADE, blank=True)
 
-
-
 # class AppointmentModel(models.Model):
 #     class Meta:
 #         db_table = 'appointment'
