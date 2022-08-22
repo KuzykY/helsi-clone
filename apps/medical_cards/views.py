@@ -10,7 +10,8 @@ from .serializers import MedicalCardSerializers
 class MedicalCardListCreateView(ListCreateAPIView):
     serializer_class = MedicalCardSerializers
     queryset = MedicalCardModel.objects.all()
-    permission_classes =(IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
+
 
 class MedicalCardRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
     serializer_class = MedicalCardSerializers
