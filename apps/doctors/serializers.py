@@ -13,3 +13,10 @@ class DoctorSerializer(ModelSerializer):
 
     def create(self, validated_data):
         return super().create(validated_data)
+
+
+class AddPatientToDoctorSerializer(ModelSerializer):
+    class Meta:
+        model = DoctorModel
+        fields = '__all__'
+        read_only_fields = ('id',)
