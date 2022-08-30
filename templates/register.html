@@ -1,1 +1,10 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block body %}
+    <h1>Привіт{{ name }}</h1>
+    <p>Щоб активувати ваш обліковий запис перейдіть <a href="{{ link }}">посиланню</a></p>
+{% endblock %}
