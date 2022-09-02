@@ -1,3 +1,5 @@
+
+
 from typing import Type
 
 from django.contrib.auth import get_user_model
@@ -10,6 +12,8 @@ from core.services.email_service import EmailService
 from .models import ProfileModel, UserModel
 
 UserModel: Type[UserModel] = get_user_model()
+
+
 
 
 class ProfileSerializer(ModelSerializer):
