@@ -6,6 +6,7 @@ from apps.patients.models import PatientModel
 class DoctorModel(models.Model):
     class Meta:
         db_table = 'doctors'
+        ordering = ['id']
 
     name = models.CharField(max_length=20)
     surname = models.CharField(max_length=40)

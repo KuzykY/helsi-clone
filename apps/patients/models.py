@@ -11,6 +11,7 @@ UserModel = get_user_model()
 class PatientModel(models.Model):
     class Meta:
         db_table = 'patients'
+        ordering = ['id']
 
     profile = models.OneToOneField(ProfileModel, on_delete=models.CASCADE, blank=True)
     # doctors = models.ManyToManyField('DoctorModel', through='AppointmentModel',related_name='patients')
