@@ -27,6 +27,9 @@ class UserToDoctorView(GenericAPIView):
     permission_classes = (IsSuperUser,)
     queryset = UserModel.objects.all()
 
+    def get_serializer(self):
+        pass
+
     def patch(self, *args, **kwargs):
         user = self.get_object()
         user.is_staff = True
@@ -35,9 +38,12 @@ class UserToDoctorView(GenericAPIView):
         return Response(serializer.data, status.HTTP_200_OK)
 
 
-class DoctorToUserView(GenericAPIView):
+class DoctorToUserView(UserToDoctorView):
     permission_classes = (IsSuperUser,)
     queryset = UserModel.objects.all()
+
+    def get_serializer(self):
+        pass
 
     def patch(self, *args, **kwargs):
         user = self.get_object()

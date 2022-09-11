@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'rest_framework_simplejwt.token_blacklist',
     'django.contrib.staticfiles',
+    'drf_yasg2',
     'rest_framework',
 
     # Apps
@@ -67,7 +68,7 @@ ROOT_URLCONF = 'configs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates') ],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,7 +89,7 @@ WSGI_APPLICATION = 'configs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('MYSQL_NAME'),
+        'NAME': os.environ.get('MYSQL_DATABASE'),
         'USER':os.environ.get('MYSQL_USER'),
         'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
         'HOST':os.environ.get('MYSQL_HOST'),

@@ -2,17 +2,31 @@ from rest_framework.generics import ListCreateAPIView, RetrieveDestroyAPIView, U
 
 from core.permissions.user_permissions import IsStaff
 
-from ..patients.serializers import PatientSerializer
+
 from .models import DoctorModel
 from .serializers import DoctorSerializer
+from ..patients.serializers import PatientSerializer
 
 
 class DoctorListCreateView(ListCreateAPIView):
+    """
+    get:
+        Get all doctors
+    post:
+        Create doctor
+    """
     serializer_class = DoctorSerializer
     queryset = DoctorModel.objects.all()
 
 
 class DoctorRetrieveDestroyView(RetrieveDestroyAPIView):
+    """
+    get:
+        Get one doctor
+
+    delete:
+        Delete doctor
+    """
     serializer_class = DoctorSerializer
     queryset = DoctorModel.objects.all()
 

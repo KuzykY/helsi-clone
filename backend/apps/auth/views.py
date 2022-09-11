@@ -32,6 +32,10 @@ class RecoveryPasswordRequestView(GenericAPIView):
 
 
 class ChangePasswordView(GenericAPIView):
+
+    def get_serializer(self, *args, **kwargs):
+        pass
+
     def post(self, *args, **kwargs):
         token = self.kwargs.get('token')
         user = JwtService.validate_token(token,RecoveryToken)
