@@ -8,6 +8,7 @@ from core.services.jwt_service import ActivateToken, JwtService, RecoveryToken
 
 
 class EmailService:
+
     @staticmethod
     def _send_email(to: str, template_name: str, context: dict, subject='') -> None:
         template = get_template(template_name)
